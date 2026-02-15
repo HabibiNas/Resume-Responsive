@@ -1,0 +1,213 @@
+/* ========== Base (Mobile-first) ========== */
+:root{
+  --bg: #0b0f17;
+  --card: #111827;
+  --text: #e5e7eb;
+  --muted: #a7b0c0;
+  --line: rgba(255,255,255,0.10);
+  --accent: #60a5fa;
+  --accent2: #34d399;
+  --shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+* { box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: radial-gradient(1200px 600px at 20% -10%, rgba(96,165,250,0.22), transparent 60%),
+              radial-gradient(1000px 600px at 80% 0%, rgba(52,211,153,0.18), transparent 55%),
+              var(--bg);
+  color: var(--text);
+  line-height: 1.55;
+}
+
+a{
+  color: var(--text);
+  text-decoration: none;
+  border-bottom: 1px dashed rgba(255,255,255,0.25);
+}
+a:hover{
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
+.page{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px;
+}
+
+/* Header */
+.header{
+  background: linear-gradient(145deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: var(--shadow);
+}
+
+.name-block h1{
+  margin: 0;
+  font-size: 1.9rem;
+  letter-spacing: 0.2px;
+}
+
+.headline{
+  margin: 6px 0 0 0;
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.contact{
+  margin-top: 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+.contact .dot{ opacity: 0.5; }
+
+/* Layout (mobile default = stacked) */
+.layout{
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+.sidebar, .content{
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Cards */
+.card, .section{
+  background: rgba(17, 24, 39, 0.82);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+}
+
+h2{
+  margin: 0 0 10px 0;
+  font-size: 1.05rem;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
+  color: rgba(229,231,235,0.92);
+}
+
+.item{ margin-top: 10px; }
+.item:first-of-type{ margin-top: 0; }
+
+.strong{ font-weight: 700; margin: 0; }
+.muted{ color: var(--muted); margin: 6px 0 0 0; }
+
+.tags{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tags li{
+  padding: 7px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,255,255,0.14);
+  background: rgba(0,0,0,0.18);
+  font-size: 0.9rem;
+}
+
+.section p{ margin: 0; }
+
+/* Roles & Projects */
+.role, .project{
+  border-top: 1px solid rgba(255,255,255,0.10);
+  padding-top: 12px;
+  margin-top: 12px;
+}
+.role:first-of-type, .project:first-of-type{
+  border-top: none;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.role-head{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-bottom: 8px;
+}
+h3{
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+.meta{
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.bullets{
+  margin: 8px 0 0 18px;
+  padding: 0;
+}
+.bullets li{
+  margin: 6px 0;
+}
+
+/* Footer */
+.footer{
+  margin-top: 16px;
+  text-align: center;
+  color: rgba(167,176,192,0.85);
+  font-size: 0.9rem;
+}
+
+/* ========== Desktop/Laptop Layout (>= 900px) ========== */
+@media (min-width: 900px){
+  .page{ padding: 28px; }
+
+  .header{
+    padding: 22px 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 18px;
+  }
+
+  .name-block h1{ font-size: 2.3rem; }
+  .headline{ font-size: 1rem; }
+
+  .contact{
+    justify-content: flex-end;
+    text-align: right;
+    max-width: 520px;
+    font-size: 0.95rem;
+  }
+
+  /* Two-column desktop layout */
+  .layout{
+    grid-template-columns: 360px 1fr;
+    gap: 18px;
+    align-items: start;
+  }
+
+  .sidebar{
+    position: sticky;
+    top: 18px;
+    height: fit-content;
+  }
+
+  .card, .section{ padding: 18px; }
+}
+
+/* ========== Ultra-wide polish (>= 1400px) ========== */
+@media (min-width: 1400px){
+  .page{ max-width: 1250px; }
+  .layout{ grid-template-columns: 380px 1fr; }
+}
