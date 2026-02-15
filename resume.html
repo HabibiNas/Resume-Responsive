@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nassim Boutayeb | Resume</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page">
+    <header class="header">
+      <div class="name-block">
+        <h1>Nassim Boutayeb</h1>
+        <p class="headline">Information Technology Student • Business/Data Analytics • Web & Systems</p>
+      </div>
+
+      <div class="contact">
+        <a href="mailto:your.email@example.com">your.email@example.com</a>
+        <span class="dot">•</span>
+        <a href="tel:+10000000000">(000) 000-0000</a>
+        <span class="dot">•</span>
+        <span>Orlando, FL</span>
+        <span class="dot">•</span>
+        <a href="https://github.com/HabibiNas" target="_blank" rel="noreferrer">github.com/HabibiNas</a>
+        <span class="dot">•</span>
+        <a href="https://HabibiNas.github.io" target="_blank" rel="noreferrer">HabibiNas.github.io</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <section class="card">
+          <h2>Skills</h2>
+          <ul class="tags">
+            <li>HTML/CSS</li><li>JavaScript</li><li>SQL</li><li>Python</li><li>C</li>
+            <li>Excel</li><li>Data Analysis</li><li>Git/GitHub</li><li>Networking</li><li>Cybersecurity</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Education</h2>
+          <div class="item">
+            <p class="strong">University of Central Florida (UCF)</p>
+            <p>B.S. Information Technology (Expected 2027)</p>
+            <p class="muted">Relevant: Databases, Networks, Security, Web Dev</p>
+          </div>
+          <div class="item">
+            <p class="strong">Valencia College</p>
+            <p>A.S. Computer Science (2023–2024) • A.A. General Studies (2021–2023)</p>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Certifications</h2>
+          <ul class="bullets">
+            <li>Google Data Analytics (optional)</li>
+            <li>CompTIA A+/Network+ (optional)</li>
+            <li>Florida Real Estate License (in progress/optional)</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Links</h2>
+          <ul class="bullets">
+            <li><a href="https://www.linkedin.com" target="_blank" rel="noreferrer">LinkedIn</a></li>
+            <li><a href="https://github.com/HabibiNas" target="_blank" rel="noreferrer">GitHub</a></li>
+            <li><a href="https://HabibiNas.github.io" target="_blank" rel="noreferrer">Portfolio</a></li>
+          </ul>
+        </section>
+      </aside>
+
+      <!-- Main content -->
+      <section class="content">
+        <section class="section">
+          <h2>Summary</h2>
+          <p>
+            IT student with hands-on experience in web development, analytics, and technical operations.
+            Strong foundation in databases, networking, and security concepts. Focused on building clean,
+            user-friendly systems and data-driven business solutions.
+          </p>
+        </section>
+
+        <section class="section">
+          <h2>Experience</h2>
+
+          <article class="role">
+            <div class="role-head">
+              <h3>Technical Associate (Website Analytics & Business Planning)</h3>
+              <p class="meta">RK Garage Doors • Dec 2024 – Present</p>
+            </div>
+            <ul class="bullets">
+              <li>Tracked website performance trends and summarized insights to support business decisions.</li>
+              <li>Improved reporting clarity by organizing analytics into actionable weekly updates.</li>
+              <li>Collaborated on planning documents and process improvements for internal operations.</li>
+            </ul>
+          </article>
+
+          <article class="role">
+            <div class="role-head">
+              <h3>Team Member</h3>
+              <p class="meta">AMC Theatres (Lake Buena Vista) • 2023 – 2024</p>
+            </div>
+            <ul class="bullets">
+              <li>Delivered customer service in a fast-paced environment with strong attention to detail.</li>
+              <li>Maintained accuracy under pressure while coordinating with team members.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2>Projects</h2>
+
+          <article class="project">
+            <div class="role-head">
+              <h3>Study Space Finder (Prototype)</h3>
+              <p class="meta">Web App Concept • HTML/CSS/JS</p>
+            </div>
+            <ul class="bullets">
+              <li>Designed a prototype interface for locating study spaces with occupancy/noise indicators.</li>
+              <li>Created structured layouts and responsive styling for usability on mobile and desktop.</li>
+            </ul>
+          </article>
+
+          <article class="project">
+            <div class="role-head">
+              <h3>Database & SQL Coursework Projects</h3>
+              <p class="meta">SQL • Data Modeling</p>
+            </div>
+            <ul class="bullets">
+              <li>Built relational tables and queries aligned with structured templates and grading rubrics.</li>
+              <li>Practiced normalization and clear documentation for technical deliverables.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2>Additional</h2>
+          <ul class="bullets">
+            <li>Coursework: Security in Computing, Database Concepts, Network Concepts</li>
+            <li>Strengths: detail-oriented, rubric-driven formatting, clear technical writing</li>
+          </ul>
+        </section>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© <span id="year"></span> Nassim Boutayeb</p>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
